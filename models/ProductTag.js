@@ -12,10 +12,18 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true
     },
-    traveller_id: {
+    product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Tag',
+        model: 'product',
+        key: 'id',
+        unique: false
+      }
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
         key: 'id',
         unique: false
       }
